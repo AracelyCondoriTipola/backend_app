@@ -1,9 +1,8 @@
 package bo.edu.ucb.academic.backend_app.dto;
 
 import java.util.Date;
-import java.util.Objects;
 
-public class PersonaDto {
+public class PersonaApiDto {
     private Integer id_person;
     private String first_name;
     private String last_name;
@@ -12,14 +11,9 @@ public class PersonaDto {
     private String phone_number;
     private String address;
     private String city;
-    private Integer status;
-    private Date tx_date;
-    private Integer tx_id_user;
-    private String tx_host;
-    private Date tx_update;
 
 
-    public PersonaDto(Integer id_person, String first_name, String last_name, String email, Date date_of_birth, String phone_number, String address, String city, Integer status, Date tx_date, Integer tx_id_user, String tx_host, Date tx_update) {
+    public PersonaApiDto(Integer id_person, String first_name, String last_name, String email, Date date_of_birth, String phone_number, String address, String city) {
         this.id_person = id_person;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -28,14 +22,9 @@ public class PersonaDto {
         this.phone_number = phone_number;
         this.address = address;
         this.city = city;
-        this.status = status;
-        this.tx_date = tx_date;
-        this.tx_id_user = tx_id_user;
-        this.tx_host = tx_host;
-        this.tx_update = tx_update;
     }
 
-    public PersonaDto() {
+    public PersonaApiDto() {
     }
 
     public Integer getId_person() {
@@ -70,26 +59,6 @@ public class PersonaDto {
         return city;
     }
 
-    public Integer getStatus() {
-        return status;
-    }
-
-    public Date getTx_date() {
-        return tx_date;
-    }
-
-    public Integer getTx_id_user() {
-        return tx_id_user;
-    }
-
-    public String getTx_host() {
-        return tx_host;
-    }
-
-    public Date getTx_update() {
-        return tx_update;
-    }
-
     public void setId_person(Integer id_person) {
         this.id_person = id_person;
     }
@@ -122,29 +91,9 @@ public class PersonaDto {
         this.city = city;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public void setTx_date(Date tx_date) {
-        this.tx_date = tx_date;
-    }
-
-    public void setTx_id_user(Integer tx_id_user) {
-        this.tx_id_user = tx_id_user;
-    }
-
-    public void setTx_host(String tx_host) {
-        this.tx_host = tx_host;
-    }
-
-    public void setTx_update(Date tx_update) {
-        this.tx_update = tx_update;
-    }
-
     @Override
     public String toString() {
-        return "PersonaDto{" +
+        return "PersonaApiDto{" +
                 "id_person=" + id_person +
                 ", first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
@@ -153,24 +102,6 @@ public class PersonaDto {
                 ", phone_number='" + phone_number + '\'' +
                 ", address='" + address + '\'' +
                 ", city='" + city + '\'' +
-                ", status=" + status +
-                ", tx_date=" + tx_date +
-                ", tx_id_user=" + tx_id_user +
-                ", tx_host='" + tx_host + '\'' +
-                ", tx_update=" + tx_update +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof PersonaDto)) return false;
-        PersonaDto that = (PersonaDto) o;
-        return Objects.equals(id_person, that.id_person);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id_person);
     }
 }

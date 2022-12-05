@@ -1,0 +1,46 @@
+GET http://localhost:8080/api/v1/personas/
+Accept: application/json
+
+###
+POST http://localhost:8080/api/v1/personas/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "first_name": "Maria",
+  "last_name": "Mamani",
+  "email": "maria@mail.com",
+  "date_of_birth": "1993-01-04",
+  "phone_number": "+59178933098",
+  "address": "Entrando media cuadra de Av. Busch",
+  "city": "Av. Busch",
+  "status": 1
+
+}
+
+###
+
+DELETE http://localhost:8080/api/v1/personas/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "status":0
+}
+
+###
+
+PUT http://localhost:8080/api/v1/personas/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "first_name": "Jose12",
+  "last_name": "Perez",
+  "email": "jana@mail.com",
+  "date_of_birth": "2000-01-04",
+  "phone_number": "+59178945098",
+  "address": "Entrando media cuadra de Av. Busch",
+  "city": "Av. Busch",
+  "status": 1
+}
